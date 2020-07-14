@@ -1,3 +1,9 @@
+/**
+ *A recursive function determines whether all digits of the number are odd or not.
+ * @param {number} 
+ * @returns {Boolean} 
+ */
+
 function odds(numb) {
     let last = numb % 10;
     if (numb < 10 && numb % 2 !== 0) {
