@@ -1,3 +1,6 @@
+/**
+ * The class that makes new data structure using Map() and Set() data structures
+ */
 class Dictionary {
   constructor(defaultValue) {
     this.dict = new Map();
