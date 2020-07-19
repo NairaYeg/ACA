@@ -5,17 +5,20 @@
  */
 
 function findViolatorIndex(arr) {
-  let tmp = [...arr];
-  function iter(tmp) {
+  function iter(tmp, idx) {
     let [first, ...rest] = tmp;
-    if (first <= rest[0]) {
-      return iter(rest);
+
+    if (arr.length === idx + 1) {
+      return -1;
     }
 
-    return rest[0];
+    if (first > rest[0]) {
+      return idx + 1;
+    }
+    return iter(rest, (idx += 1));
   }
 
-  return arr.indexOf(iter(tmp));
+  return iter(arr, 0);
 }
 
 console.log(findViolatorIndex([-9, -4, -4, 3, 12, 4, 5])); //5
