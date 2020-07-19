@@ -7,16 +7,16 @@
 function printValues(tree) {
   let res = [];
   function iter(tree) {
-    let tmp = tree;
-    if (tmp) {
-      res.push(tmp.value);
-      tmp = tmp.next;
-      return iter(tmp);
+    if (tree) {
+      res.push(tree.value);
+      tree = tree.next;
+      return iter(tree);
     }
     return res;
   }
   return iter(tree);
 }
+
 
 const tree = {
   value: 12,
