@@ -13,6 +13,8 @@ function removeFirstElem(arr) {
   }
 
   function iter(arr) {
+    
+    // adds the last element of the array from the beginning and removes the same element from the end
     arr.length = arr.unshift(arr[arr.length - 1]) - 1;
 
     let last = arr[arr.length - 1];
@@ -29,11 +31,9 @@ function removeFirstElem(arr) {
   return iter(arr);
 }
 
-
-
-
 console.log(removeFirstElem([6, 78, "n", 0, 1]));
 
-console.log(removeFirstElem([5]))
+console.log(removeFirstElem([5]));
 
-console.log(removeFirstElem([]))
+console.log(removeFirstElem([]));
+
